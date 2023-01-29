@@ -1,5 +1,5 @@
+import Article from "@/components/Article";
 import { Button } from "@/components/Button";
-import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
 import BriefcaseIcon from "@/components/icons/BriefcaseIcon";
@@ -12,14 +12,12 @@ import image2 from "@/images/photos/image-2.jpg";
 import image3 from "@/images/photos/image-3.jpg";
 import image4 from "@/images/photos/image-4.jpg";
 import image5 from "@/images/photos/image-5.jpg";
-import { formatDate } from "@/lib/formatDate";
 import { generateRssFeed } from "@/lib/generateRssFeed";
 import { getAllArticles } from "@/lib/getAllArticles";
 import clsx from "clsx";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Article from "@/components/Article";
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
@@ -44,7 +42,7 @@ function Email() {
         to me via email. I am always eager to work on something new and
         challenging.
       </p>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button href="mailto:macsweenydev@gmail.com" variant="secondary" className="group mt-6 w-full">
         macsweenydev@gmail.com
       </Button>
     </form>
@@ -112,14 +110,18 @@ function Resume() {
           </li>
         ))}
       </ol>
+      <a
+      href="../public/resume.pdf"
+      download="mac_sweeny_resume.pdf"
+      >
       <Button
-        href="file:///Users/macbook/Downloads/Resume.pdf"
         variant="secondary"
         className="group mt-6 w-full"
       >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
+      </a>
     </div>
   )
 }
