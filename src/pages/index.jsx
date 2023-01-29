@@ -128,6 +128,7 @@ function Resume() {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  let websiteLinks = ['https://www.prisma.io/', 'https://www.typescriptlang.org/', 'https://nextjs.org/', 'https://trpc.io/', 'https://tailwindcss.com/']
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -140,12 +141,14 @@ function Photos() {
               rotations[imageIndex % rotations.length]
             )}
           >
+            <Link href={websiteLinks[imageIndex]} target="_blank">
             <Image
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />
+            </Link>
           </div>
         ))}
       </div>
