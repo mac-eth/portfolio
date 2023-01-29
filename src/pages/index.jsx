@@ -167,7 +167,7 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Hi, I’m Mac Sweeny, a Full-Stack Software Engineer.
+            Hi, I’m Mac Sweeny, a <a className="text-teal-500"> Full-Stack Software Engineer</a>.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             My name is Mac and I am a software engineer based in Brisbane,
